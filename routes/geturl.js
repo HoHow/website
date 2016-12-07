@@ -3,7 +3,7 @@ var request = require('request');
 var router = express();
 
 router.post('/',function(req, res, next){
-  
+  res.send('a');
 });
 
 module.exports = router;
