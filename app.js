@@ -14,25 +14,6 @@ var app = express();
 
 
 
-
-
-
-
-// view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'ejs');
-
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(bodyParser.urlencoded({extended: true }));
-//limit: '50mb',parameterLimit: 10000
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
-
-
 // Add headers
 app.use(function (req, res, next) {
 
@@ -52,6 +33,25 @@ app.use(function (req, res, next) {
     // Pass to next layer of middleware
     next();
 });
+
+
+
+
+// view engine setup
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
+
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(logger('dev'));
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({extended: true }));
+//limit: '50mb',parameterLimit: 10000
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+
 
 
 
