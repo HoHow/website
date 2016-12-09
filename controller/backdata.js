@@ -12,7 +12,7 @@ function backdata(body,callback){
 
   }
   
-  
+  console.log(imgs);
   callback(false,{title:title,article:article,photo:imgs});
 }
 
