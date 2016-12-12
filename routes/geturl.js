@@ -10,7 +10,6 @@ router.post('/',function(req, res, next){
   if (!error && response.statusCode == 200) {
   
     backdata(body,function(err,body){
-      res.writeHead(200, { 'Content-Type': contentType, 'Access-Control-Allow-Origin': '*' });
       res.json(err?400:200,body);
     });
 
